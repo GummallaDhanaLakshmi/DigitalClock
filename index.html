@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>DIGITAL CLOCK</h1>
+    <div class="container">
+    <div id="hours"></div>
+    <div id="min"></div>
+    <div id="sec"></div>
+</div>
+    <script>
+        setInterval(()=>
+        {
+        let clck = new Date()
+        let hours = document.getElementById("hours");
+        let min = document.getElementById("min");
+        let sec = document.getElementById("sec");
+        
+        hours.innerHTML = clck.getHours() +" "+ ":";
+        min.innerHTML = clck.getMinutes() +" "+ ":";
+        sec.innerHTML = clck.getSeconds() ;
+        },1000);
+
+        console.log(clck.getHours())
+        console.log(clck.getMinutes())
+        console.log(clck.getSeconds())
+    </script>
+</body>
+</html>
